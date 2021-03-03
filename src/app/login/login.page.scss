@@ -4,29 +4,42 @@ ion-content{
          --color: rgb(0, 0, 0) !important;
     
      .blue-bg {
-        background: var( --ion-color-orange);
+        background: var(--ion-color-orange);
         height: 303px;
+        position: relative;
         border-radius: 0 0 85% 85%/34% !important;
     
+        .logo {
+            width: 91px;
+            height: 91px;
+            margin: auto;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 73px;
+        }
 
         h1 {
             margin: 0px;
-            /* margin-top: 20px; */
-            position: relative;
-            top: 168px;
-            color:var(--ion-color-white);
+            color: var(--ion-color-white);
             font-size: 28px;
             font-weight: bold;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 170px;
         }
     }
     form {
-        width: 69%;
+        width: 78%;
         margin: auto;
         background: var(--ion-color-white);
         padding: 12px 20px;
         margin-top: -89px;
         border-radius: 5px;
+        position: relative;
         box-shadow: 0px 0px 10px #00000040;
+    
         ion-row {
             margin-top: 41px;
         ion-item {

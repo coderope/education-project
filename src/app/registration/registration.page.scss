@@ -4,31 +4,45 @@ ion-content{
     --color: rgb(0, 0, 0) !important;
 
 .blue-bg {
-   background: var( --ion-color-orange);
-   height: 303px;
-   border-radius: 0 0 85% 85%/34%;
+    background: var(--ion-color-orange);
+    height: 289px;
+    position: relative;
+    border-radius: 0 0 85% 85%/34% !important;
 
+ .logo {
+    width: 91px;
+    height: 91px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 55px;
+}
 
    h1 {
-       margin: 0px;
-       /* margin-top: 20px; */
-       position: relative;
-       top: 168px;
-       color: #fff;
-       font-size: 28px;
-       font-weight: bold;
-   }
+    margin: 0px;
+    color: var(--ion-color-white);
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 153px;
+}
 }
 form {
-   width: 69%;
-   margin: auto;
-   background: var(--ion-color-white);
-   padding: 12px 20px;
-   margin-top: -89px;
-   border-radius: 5px;
-   box-shadow: 0px 0px 10px #00000040;
-   ion-row {
-       margin-top: 41px;
+    width: 78%;
+    margin: auto;
+    background: var(--ion-color-white);
+    padding: 12px 20px;
+    margin-top: -89px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0px 0px 10px #00000040;
+
+
+  ion-row {
+       
    ion-item {
        font-size: 15px;
        --highlight-color-focused: var( --ion-color-orange);
@@ -53,7 +67,7 @@ form {
        margin-left: auto;
        margin-right: auto;
        --box-shadow: none;
-       box-shadow: 0 0 10px #ff9700;
+       box-shadow: 0 0 10px var(--ion-color-orange);
    }
   
 }
