@@ -1,0 +1,52 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+     <ion-icon name="chevron-back-outline" [routerLink]="['/tabs/dashboard']" routerLinkActive="router-link-active" ></ion-icon>
+     <ion-title>Mocktest</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+  <ion-grid>
+     <!-- <ion-row>
+        <ion-col size="12" class="ion-text-center">
+           <h1 class="mock-test-header">Mock Test</h1>
+        </ion-col>
+     </ion-row> -->
+  </ion-grid>
+  <ion-segment value="favorite" >
+     <ion-segment-button value="call" class>
+        <ion-label>All</ion-label>
+     </ion-segment-button>
+     <ion-segment-button value="favorite" >
+        <ion-label>Attempted </ion-label>
+     </ion-segment-button>
+     <ion-segment-button value="map">
+        <ion-label>Unattempted</ion-label>
+     </ion-segment-button>
+  </ion-segment>
+  <ion-grid >
+     <ion-row>  
+        <ion-col size="12" class="ion-padding">
+           <ion-card>
+              <ion-card-content>
+                 <ion-icon name="document-text-outline" slot="end"></ion-icon>
+                 <h1>UPSE CSE Practice test</h1>
+                 <h6>12jun20 | 3hr</h6>
+                 <P>Results on: 29 jun '20 | 3:000 </P>
+              </ion-card-content>
+           </ion-card>
+        </ion-col>
+     </ion-row>
+     <ion-row>
+        <ion-col size="12"  class="ion-padding">
+           <ion-card>
+              <ion-card-content>
+                 <ion-icon name="document-text-outline" slot="end"></ion-icon>
+                 <h1>UPSE CSE Practice test</h1>
+                 <h6>12jun20 | 3hr</h6>
+                 <P>Results on: 29 jun '20 | 3:000 </P>
+              </ion-card-content>
+           </ion-card>
+        </ion-col>
+     </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,62 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content  class="ion-no-padding">
+  <div class="header">
+    <ion-item lines="none">
+      <ion-icon name="chevron-back-outline" [routerLink]="['/profile']" routerLinkActive="router-link-active" ></ion-icon>
+      <ion-label>profile</ion-label>
+        </ion-item>
+   
+  </div>
+<ion-grid class="ion-padding">
+ <div class="profile-cover-pic">
+   <div class="cover-pic-image">
+    <img src="assets/img/cover.jpg">
+   </div>
+   
+   
+      <div class="profile-pic" >
+     
+        <ion-img  src="assets/img/profile.png"></ion-img>
+      </div>
+   </div>
+   <ion-list>
+    <ion-item lines="none">
+      <ion-icon name="person"></ion-icon>
+      <ion-input placeholder="User Name"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon name="mail"></ion-icon>
+      <ion-input placeholder="Email"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon name="lock-closed"></ion-icon>
+      <ion-input placeholder="Password"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon name="calendar-number"></ion-icon>
+      <ion-input placeholder="Date of Birth"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon name="location"></ion-icon>
+      <ion-input placeholder="Address"></ion-input>
+    </ion-item>
+    
+    <ion-button expand="block">Update</ion-button>
+   </ion-list>
+</ion-grid>
+</ion-content>
+
+<!-- <ion-header>
+  <ion-toolbar>
+     <ion-buttons slot="start" (click)="toggleMenu()">
+        <ion-menu-button></ion-menu-button>
+     </ion-buttons>
+     <ion-title>PROFILE</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+

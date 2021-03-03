@@ -1,0 +1,137 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+     <ion-icon name="chevron-back-outline" [routerLink]="['/tabs/dashboard']" routerLinkActive="router-link-active" ></ion-icon>
+     <ion-title>Book Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid class="ion-no-padding">
+     <ion-card>
+        <ion-row>
+           <ion-col size="4">
+              <div class="book-image">
+                 <img src="assets/img/book.jpg">
+              </div>
+           </ion-col>
+           <ion-col size="8">
+              <h3  class="ion-text-wrap"> NCERT Books for Class 12-English Medium </h3>
+              <ion-label class="ion-text-wrap">
+                 <ion-chip color="secondary">
+                    <ion-label>Class 10</ion-label>
+                 </ion-chip>
+                 <ion-chip color="success">
+                    <ion-label>Other</ion-label>
+                 </ion-chip>
+                 <ion-chip  color="tertiary">
+                    <ion-label>Hindi</ion-label>
+                 </ion-chip>
+                 <p>
+                    <ion-chip outline color="light">
+                       <ion-avatar>
+                          <img src="assets/img/pdf images.png" />
+                       </ion-avatar>
+                       <ion-label>
+                          <ion-text>10 PDF</ion-text>
+                       </ion-label>
+                    </ion-chip>
+                    <ion-chip outline color="light">
+                       <ion-icon name="star" color="warning"></ion-icon>
+                       <ion-label>
+                          <ion-text>4.0</ion-text>
+                       </ion-label>
+                    </ion-chip>
+                 </p>
+              </ion-label>
+           </ion-col>
+        </ion-row>
+     </ion-card>
+     <!-- <ion-list>
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+             <img src="assets/img/book.jpg">
+          </ion-thumbnail>
+          <ion-label class="ion-text-wrap">
+             <h3>Lorem ipsum Lorem ipsum Lorem ipsum Lorem </h3>
+             <ion-chip color="secondary">
+              <ion-label>Class 10</ion-label>
+            </ion-chip>
+            <ion-chip color="success">
+              <ion-label>Other</ion-label>
+            </ion-chip>
+            <ion-chip  color="tertiary">
+              <ion-label>Hindi</ion-label>
+            </ion-chip>
+            <p>  <ion-chip outline color="light">
+              <ion-avatar>
+                <img src="assets/img/pdf images.png" />
+              </ion-avatar>
+              <ion-label><ion-text>10 PDF</ion-text></ion-label>
+            </ion-chip>  <ion-chip outline color="light">
+              <ion-icon name="star" color="warning"></ion-icon>
+        
+              <ion-label><ion-text>4.0</ion-text></ion-label>
+            </ion-chip></p>
+          </ion-label>
+        </ion-item>
+        </ion-list> -->
+     <ion-row>
+        <ion-col size="12" class="ion-text-center">
+           <ion-segment value="all">
+              <ion-segment-button value="all">
+                 <ion-label>Overview</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="favorites">
+                 <ion-label>Contact</ion-label>
+              </ion-segment-button>
+           </ion-segment>
+        </ion-col>
+     </ion-row>
+     <ion-row>
+        <ion-col size="12">
+           <ion-item>
+              <ion-label> 10 PDF</ion-label>
+              <ion-select value="2000">
+                 <ion-select-option value="2000">2000</ion-select-option>
+                 <ion-select-option value="2000">2000</ion-select-option>
+                 <ion-select-option value="2000">2000</ion-select-option>
+                 <ion-select-option value="2000">2000</ion-select-option>
+              </ion-select>
+           </ion-item>
+           <ion-item lines="none" class="download-file">
+              <ion-thumbnail slot="start">
+                 <img src="assets/img/pdf images.png">
+              </ion-thumbnail>
+              <ion-thumbnail slot="end" class="download-icon">
+                 <img  src="assets/img/download-icon.png">
+              </ion-thumbnail>
+              <ion-label class="ion-text-wrap">
+                 consectetur adipiscing elit. Duis ut urna neque.
+              </ion-label>
+           </ion-item>
+           <ion-item lines="none" class="download-file">
+              <ion-thumbnail slot="start">
+                 <img src="assets/img/pdf images.png">
+              </ion-thumbnail>
+              <ion-thumbnail slot="end" class="download-icon">
+                 <img  src="assets/img/download-icon.png">
+              </ion-thumbnail>
+              <ion-label class="ion-text-wrap">
+                 consectetur adipiscing elit. Duis ut urna neque.
+              </ion-label>
+           </ion-item>
+           <ion-item lines="none" class="download-file">
+              <ion-thumbnail slot="start">
+                 <img src="assets/img/pdf images.png">
+              </ion-thumbnail>
+              <ion-thumbnail slot="end" class="download-icon">
+                 <img  src="assets/img/download-icon.png">
+              </ion-thumbnail>
+              <!-- <ion-icon slot="end" name="download"></ion-icon> -->
+              <ion-label class="ion-text-wrap">
+                 consectetur adipiscing elit. Duis ut urna neque.
+              </ion-label>
+           </ion-item>
+        </ion-col>
+     </ion-row>
+  </ion-grid>
+</ion-content>
