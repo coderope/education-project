@@ -27,10 +27,10 @@ ion-toolbar {
         --background: transparent;
         ion-list{
             ion-item {
-            border-bottom: 2px solid #e2e0e0;
-            padding: 8px 0px;
-            --background: transparent;
-            color:var(--ion-color-white);
+                padding: 4px 0px;
+                --background: transparent;
+                color: var(--ion-color-white);
+            
             }
     }
     .list-ios {

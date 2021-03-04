@@ -63,7 +63,7 @@
                    ></circle-progress>
                   </div>
                   <p>
-                     <br><span>Lessons completed </span><br> 
+                     <br><span>Test completed </span><br> 
                      <!-- <ion-icon name="lock-closed-outline"></ion-icon> -->
                   </p>
                </ion-card>
@@ -92,8 +92,20 @@
             <ion-col size="6" >
               <ion-card class="ion-text-center">
                <ion-list>
-                  <canvas #barChart></canvas>
-               
+                  <circle-progress
+                  [percent]="55"
+                  [radius]="10"
+                  [showTitle]="true"
+                  [title] ="Questions"
+                  [titleFontSize]="44"
+                   [showUnits]="false"
+                  [innerStrokeWidth]="0"
+                  [outerStrokeColor]="false"
+                  [innerStrokeColor]="'#C7E596'"
+                  [animation]="true"
+                  [animationDuration]="300"
+                 
+                ></circle-progress>
                 </ion-list>
                
                   <p>

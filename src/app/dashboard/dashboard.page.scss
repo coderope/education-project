@@ -1,4 +1,9 @@
 ion-toolbar {
+	.header{
+		background-color: var(--ion-color-orange);
+		height: 70px;
+		padding: 9px 0;
+	}
 	--background: var(--ion-color-orange);
 	ion-icon {
 		font-size: 30px;
@@ -13,6 +18,7 @@ ion-toolbar {
 		height: 79px;
 		padding: 0px;
 	}
+	
 }
 
 .cover-pic-image {
