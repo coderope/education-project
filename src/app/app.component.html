@@ -1,6 +1,6 @@
 <ion-app>
    <ion-router-outlet></ion-router-outlet>
-   <ion-menu contentId="main" type="reveal" swipeEnabled="false" side="start">
+   <ion-menu contentId="main" type="overlay" swipeEnabled="false" side="start">
       <ion-header>
          <ion-toolbar>
             <ion-list class="ion-padding">
@@ -19,49 +19,49 @@
       <ion-content>
          <ion-list>
             <ion-menu-toggle auto-hide="false">
-               <ion-item lines="none" >
+               <ion-item lines="none">
                   <ion-icon name="home-outline" slot="start"></ion-icon>
                   <ion-label routerLink="/home">
                      Home
                   </ion-label>
                </ion-item>
-               <ion-item lines="none" >
+               <ion-item lines="none">
                   <ion-icon name="time-outline" slot="start"></ion-icon>
                   <ion-label routerLink="/tabs/dashboard">
                      Dashboard
                   </ion-label>
                </ion-item>
-               <ion-item lines="none" >
+               <ion-item lines="none">
                   <ion-icon name="person-outline" slot="start"></ion-icon>
                   <ion-label routerLink="/profile">
                      My Account
                   </ion-label>
                </ion-item>
-               <ion-item lines="none" >
+               <ion-item lines="none">
                   <ion-icon name="desktop-outline" slot="start"></ion-icon>
                   <ion-label routerLink="/courses">
                      Courses
                   </ion-label>
                </ion-item>
-               <ion-item lines="none" >
+               <ion-item lines="none">
                   <ion-icon name="document-text-outline" slot="start"></ion-icon>
                   <ion-label routerLink="/mocktest">
                      Test
                   </ion-label>
                </ion-item>
-               <ion-item lines="none" >
+               <ion-item lines="none">
                   <ion-icon name="book-outline" slot="start"></ion-icon>
                   <ion-label routerLink="/books">
                      Books
                   </ion-label>
                </ion-item>
-               <ion-item lines="none" >
+               <ion-item lines="none">
                   <ion-icon name="share-social-outline" slot="start"></ion-icon>
                   <ion-label routerLink="/registration">
                      Referral
                   </ion-label>
                </ion-item>
-               <ion-item lines="none" >
+               <ion-item lines="none">
                   <ion-icon name="log-out-outline" slot="start"></ion-icon>
                   <ion-label>
                      Logout
@@ -71,5 +71,5 @@
          </ion-list>
       </ion-content>
    </ion-menu>
-   <ion-router-outlet id="main" ></ion-router-outlet>
+   <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

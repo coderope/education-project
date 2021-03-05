@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -25,14 +25,26 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 ion-router-outlet.menu-content-open {
-    box-shadow: -5px 2px 21px #383a3e  !important;
-    margin-top: 77px;
-    margin-left: -82px;
-    transition: 700ms;
+  box-shadow: -5px 2px 21px #383a3e !important;
 }
 body {
-    background: #ff9700;
+  background: #ff9700;
 }
-// .ios .menu-content-reveal {
-//     box-shadow: none !important;
-// }
+ion-router-outlet#main {
+  transition: 0.6s;
+}
+.menu-content-open {
+  margin-top: 120px;
+  margin-left: 300px !important;
+  transition: 1s;
+  margin-right: -300px;
+}
+
+ion-menu.show-menu {
+  position: absolute;
+  z-index: 0;
+}
+ion-menu {
+  --ion-backdrop-color: #ff9700 !important;
+  // transition: 1s;
+}

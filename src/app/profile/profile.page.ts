@@ -11,6 +11,13 @@ export class ProfilePage implements OnInit {
   bars: any;
   colorArray: any;
   constructor() { }
+  option={
+    slidesPerView: 2.5,
+    centeredSlides: true,
+    loop: true,
+    spaceBetween: 2,
+    autoplay:false,
+  }
 ionViewDidEnter() {
     this.createBarChart();
   }
