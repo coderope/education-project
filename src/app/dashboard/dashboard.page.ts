@@ -13,14 +13,14 @@ export class DashboardPage implements OnInit {
     centeredSlides: true,
     loop: true,
     spaceBetween: 8,
-    autoplay:false,
+    autoplay:true,
   }
   slideOpt={
    
     centeredSlides: true,
     loop: true,
    
-    autoplay:false,
+    autoplay:true,
   }
   ngOnInit() {
   }

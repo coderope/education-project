@@ -1,8 +1,10 @@
 ion-tab-bar {
-    padding: 10px 5px;
+    padding: 5px 5px;
 }
 ion-tab-bar {
     background-color: var(--ion-color-orange);
+    height: 63px;
+
     ion-tab-button {
         --background: transparent;
         color: var(--ion-color-white);
@@ -13,4 +15,12 @@ ion-tab-bar {
             font-size: 16px;
         }
     }
+}
+.live-classes ion-icon {
+    background: #ff9700;
+    padding: 8px 8px;
+    border-radius: 47%;
+    box-shadow: 0 3px 17px 3px #1e1e1e;
+    color: #ffffff;
+    font-size: 22px !important;
 }
