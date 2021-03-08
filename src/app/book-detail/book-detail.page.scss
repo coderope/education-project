@@ -62,14 +62,16 @@ ion-thumbnail.download-icon{
             margin: auto;
             margin-top: 12px;
             margin-bottom: 10px;
+            
   
             .segment-button-checked{
                 --background: transparent;
-                --background-checked: none;
-                --indicator-box-shadow: none;
-                border-radius: 0px;
-                border-bottom: 3px solid var(--ion-color-orange);
-                color: var(--ion-color-orange);
-            }
+    --background-checked: none;
+    --indicator-box-shadow: none;
+    --indicator-color: #FFF;
+    border-radius: 0px;
+    border-bottom: 3px solid var(--ion-color-orange);
+    color: var(--ion-color-orange);
+}
         }
        

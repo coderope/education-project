@@ -29,10 +29,16 @@ ion-content {
     ion-item {
       padding: 4px 0px;
       --background: transparent;
-      color: var(--ion-color-white);
-    }
+      --color: var(--ion-color-white);
+  }
   }
   .list-ios {
     background: transparent !important;
   }
+}
+ion-menu ion-list.md {
+  background: border-box;
+}
+ion-icon.md.hydrated {
+  color: #fff;
 }

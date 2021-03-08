@@ -12,15 +12,15 @@ export class DashboardPage implements OnInit {
     // slidesPerView: 1.5,
     centeredSlides: true,
     loop: true,
-    spaceBetween: 8,
-    autoplay:false,
+    // spaceBetween: 8,
+    autoplay:true
   }
   slideOpt={
-   
+    spaceBetween: 8,
     centeredSlides: true,
     loop: true,
    
-    autoplay:false,
+    autoplay:true
   }
   ngOnInit() {
   }

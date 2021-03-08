@@ -1,17 +1,15 @@
 ion-header {
   ion-toolbar {
-    height: 60px;
+    
     --background: transparent;
     background-color: var(--ion-color-orange);
     color: #fff;
     text-transform: uppercase;
     ion-icon {
-      margin-top: 11px;
+      // margin-top: 11px;
       font-size: 27px;
     }
-    ion-title {
-      margin-top: 6px;
-    }
+  
   }
 }
 

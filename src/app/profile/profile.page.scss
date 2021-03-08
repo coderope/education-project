@@ -6,7 +6,7 @@ ion-header {
 		color: #fff;
 		text-transform: uppercase;
 		ion-icon {
-			margin-top: 11px;
+			// margin-top: 11px;
 			font-size: 27px;
 		}
 		ion-menu-button {
@@ -72,6 +72,10 @@ ion-card {
 	height: 165px;
 	padding: 33px 0;
 	border-radius: 0 0 86% 85%/90%;
+	ion-icon {
+		color: #fff;
+		margin-right: 5px;
+	}
 }
 
 .header {
