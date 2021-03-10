@@ -55,28 +55,17 @@ ion-content{
     }
    
         ion-button{
-            --background: transparent;
-            background-color: var( --ion-color-orange);
+            --background: var(--ion-color-orange);
             --background-activated-opacity: 0;
-            border-radius: 50px;
+            --border-radius: 50px;
             margin-top: 42px;
-            height: 48px;
+            height: 66px;
             font-size: 21px;
-            width: 66%;
-            margin-left: auto;
-            margin-right: auto;
             --box-shadow: none;
-            box-shadow: 0 0 10px var(--ion-color-orange);
         }
        
     }
     
-  
-   
-      
-        // ion-row {
-        //     margin-top: 13px;
-        // }
         p.ion-text-center.forgot-password {
             margin-top: 58px;
             font-weight: bold;
@@ -84,12 +73,15 @@ ion-content{
         }
         p.ion-text-center{
             font-weight: 400;
-    font-size: 14px;
+                 font-size: 14px;
 }
-            font-size: 15px;
-    --highlight-color-focused:var( --ion-color-orange);
-    height: 58px;
+         
 }
 ion-label#ion-input-2-lbl {
     color: #000;
+}
+p{
+    ion-text{
+        color: var(--ion-color-orange);
+    }
 }

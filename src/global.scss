@@ -24,6 +24,11 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@font-face{
+  font-family:'Impact';
+  src: url(./assets/fonts/impact.ttf);
+}
 ion-router-outlet.menu-content-open {
   box-shadow: -5px 2px 21px #383a3e !important;
 }
@@ -47,4 +52,46 @@ ion-menu.show-menu {
 ion-menu {
   --ion-backdrop-color: #ff9700 !important;
   // transition: 1s;
+}
+
+ion-header{
+  ion-toolbar{
+    --background:var(--ion-color-orange);
+    color:var(--ion-color-white);
+    ion-title{
+      font-size: 18px;
+      text-transform: capitalize;
+      text-align: center;
+    }
+  }
+}
+.slide-thumb-custom span {
+  flex: 1;
+  display: block;
+  height: 3px;
+  background: red;
+  margin: 5px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.slide-thumb-custom span.active:after {
+  content: '';
+  display: block;
+  height: inherit;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+  transform: translateX(-100%);
+  animation: thumb 5s forwards linear;
+}
+.header-md::after{
+  content: none;
+}
+.menu-inner, ion-menu {
+  box-shadow: none !important;
+  --box-shadow: none !important;
+}
+ion-menu[type=overlay] .menu-inner{
+  box-shadow: none !important;
+  --box-shadow: none !important;
 }
