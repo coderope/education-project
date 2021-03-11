@@ -1,4 +1,23 @@
-
+ion-header{
+  ion-toolbar{
+    ion-avatar{
+      height: 35px;
+      width: 35px;
+      position: relative;
+      span{
+        position: absolute;
+        top: 0;
+        left: -16px;
+        background: red;
+        padding: 3px;
+        min-height: 15px;
+        min-width: 15px;
+        font-size: 12px;
+        border-radius: 50%;
+    }
+    }
+  }
+}
 .mock-test-list {
   width: 100%;
   border-left: 10px solid var(--ion-color-orange);

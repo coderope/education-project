@@ -58,6 +58,8 @@ ion-header{
   ion-toolbar{
     --background:var(--ion-color-orange);
     color:var(--ion-color-white);
+    --padding-top: 10px;
+    --padding-bottom: 10px;
     ion-title{
       font-size: 18px;
       text-transform: capitalize;
