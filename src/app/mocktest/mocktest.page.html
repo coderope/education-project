@@ -1,45 +1,62 @@
 <ion-header class="ion-no-border">
-  <ion-toolbar mode="ios">
-     <ion-icon name="chevron-back-outline" slot="start" [routerLink]="['/tabs/dashboard']" routerLinkActive="router-link-active" ></ion-icon>
+   <ion-toolbar mode="ios">
+      <ion-buttons slot="start">
+         <ion-back-button text="" defaultHref="/"></ion-back-button>
+      </ion-buttons>
      <ion-title>Mocktest</ion-title>
-  </ion-toolbar>
+   </ion-toolbar>
+  
 </ion-header>
 <ion-content >
-  <ion-segment value="favorite" >
-     <!-- <ion-segment-button value="call" class>
-        <ion-label>All</ion-label>
-     </ion-segment-button> -->
-     <ion-segment-button value="favorite" >
-        <ion-label>Attempted </ion-label>
-     </ion-segment-button>
-     <ion-segment-button value="map">
-        <ion-label>Unattempted</ion-label>
-     </ion-segment-button>
-  </ion-segment>
+  
   <ion-grid >
-     <ion-row>  
-        <ion-col size="12" class="ion-padding">
-           <ion-card>
-              <ion-card-content>
-                 <ion-icon name="document-text-outline" slot="end"></ion-icon>
-                 <h1>UPSE CSE Practice test</h1>
-                 <h6>12jun20 | 3hr</h6>
-                 <P>Results on: 29 jun '20 | 3:000 </P>
-              </ion-card-content>
-           </ion-card>
-        </ion-col>
-     </ion-row>
-     <ion-row>
-        <ion-col size="12"  class="ion-padding">
-           <ion-card>
-              <ion-card-content>
-                 <ion-icon name="document-text-outline" slot="end"></ion-icon>
-                 <h1>UPSE CSE Practice test</h1>
-                 <h6>12jun20 | 3hr</h6>
-                 <P>Results on: 29 jun '20 | 3:000 </P>
-              </ion-card-content>
-           </ion-card>
-        </ion-col>
-     </ion-row>
+   <ion-segment value="attempted" [(ngModel)]="segmentModel" (ionChange)="segmentChanged($event)">
+    
+      <ion-segment-button value="attempted" >
+         <ion-label>Attempted </ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="unattempted">
+         <ion-label>Unattempted</ion-label>
+      </ion-segment-button>
+   </ion-segment>
+   <!-- Start section Attempted -->
+   <ion-list *ngIf="segmentModel === 'attempted'">
+      <ion-item lines="full">
+         <ion-label>
+            <h1>UPSE CSE Practice test</h1>
+            <p>12 jun 20 | 3hr</p>
+            <P>Results on: 29 jun '20 | 3:000 </P>
+         </ion-label>
+         <ion-icon name="document-text-outline" slot="end"></ion-icon>
+      </ion-item>
+      <ion-item lines="full">
+         <ion-label>
+            <h1>UPSE CSE Practice test</h1>
+            <p>12jun20 | 3hr</p>
+            <P>Results on: 29 jun '20 | 3:000 </P>
+         </ion-label>
+         <ion-icon name="document-text-outline" slot="end"></ion-icon>
+      </ion-item>
+   </ion-list>
+   <!-- End section Attempted -->
+   <!-- start section Unattempted -->
+   <ion-list *ngIf="segmentModel === 'unattempted'">
+      <ion-item lines="full">
+         <ion-label>
+            <h1>UPSE</h1>
+            <p>12 jun 20 | 3hr</p>
+            <P>Results on: 29 jun '20 | 3:000 </P>
+         </ion-label>
+         <ion-icon name="document-text-outline" slot="end"></ion-icon>
+      </ion-item>
+      <ion-item lines="full">
+         <ion-label>
+            <h1>UPSE</h1>
+            <p>12jun20 | 3hr</p>
+            <P>Results on: 29 jun '20 | 3:000 </P>
+         </ion-label>
+         <ion-icon name="document-text-outline" slot="end"></ion-icon>
+      </ion-item>
+   </ion-list>
   </ion-grid>
 </ion-content>

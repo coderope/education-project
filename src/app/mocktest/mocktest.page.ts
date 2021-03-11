@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mocktest.page.scss'],
 })
 export class MocktestPage implements OnInit {
-
+  segmentModel = "attempted";
   constructor() { }
 
   ngOnInit() {

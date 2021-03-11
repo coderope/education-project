@@ -1,6 +1,8 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar>
-     <ion-icon name="chevron-back-outline" slot="start" [routerLink]="['/tabs/dashboard']" routerLinkActive="router-link-active" ></ion-icon>
+<ion-header>
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+       <ion-back-button text="" defaultHref="/"></ion-back-button>
+    </ion-buttons>
      <ion-title>Book Details</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -45,49 +47,18 @@
            </ion-col>
         </ion-row>
      </ion-card>
-     <!-- <ion-list>
-        <ion-item lines="none">
-          <ion-thumbnail slot="start">
-             <img src="assets/img/book.jpg">
-          </ion-thumbnail>
-          <ion-label class="ion-text-wrap">
-             <h3>Lorem ipsum Lorem ipsum Lorem ipsum Lorem </h3>
-             <ion-chip color="secondary">
-              <ion-label>Class 10</ion-label>
-            </ion-chip>
-            <ion-chip color="success">
-              <ion-label>Other</ion-label>
-            </ion-chip>
-            <ion-chip  color="tertiary">
-              <ion-label>Hindi</ion-label>
-            </ion-chip>
-            <p>  <ion-chip outline color="light">
-              <ion-avatar>
-                <img src="assets/img/pdf images.png" />
-              </ion-avatar>
-              <ion-label><ion-text>10 PDF</ion-text></ion-label>
-            </ion-chip>  <ion-chip outline color="light">
-              <ion-icon name="star" color="warning"></ion-icon>
-        
-              <ion-label><ion-text>4.0</ion-text></ion-label>
-            </ion-chip></p>
-          </ion-label>
-        </ion-item>
-        </ion-list> -->
-     <ion-row>
-        <ion-col size="12" class="ion-text-center">
-           <ion-segment value="all">
-              <ion-segment-button value="all">
-                 <ion-label>Overview</ion-label>
-              </ion-segment-button>
-              <ion-segment-button value="favorites">
-                 <ion-label>Contact</ion-label>
-              </ion-segment-button>
-           </ion-segment>
-        </ion-col>
-     </ion-row>
-     <ion-row>
-        <ion-col size="12">
+     
+     <ion-segment value="overview" [(ngModel)]="segmentModel" (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="overview">
+         <ion-label>Overview</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="contact">
+         <ion-label>Contact</ion-label>
+      </ion-segment-button>
+   </ion-segment>
+
+   <!-- section list start Overview -->
+      <ion-list *ngIf="segmentModel === 'overview'">
            <ion-item>
               <ion-label> 10 PDF</ion-label>
               <ion-select value="2000">
@@ -131,7 +102,37 @@
                  consectetur adipiscing elit. Duis ut urna neque.
               </ion-label>
            </ion-item>
-        </ion-col>
-     </ion-row>
+      </ion-list>
+   <!-- section list end Overview -->
+
+    <!-- section list start Contact -->
+    <ion-list *ngIf="segmentModel === 'contact'">
+      
+      <ion-item lines="none" class="download-file">
+         <ion-thumbnail slot="start">
+            <img src="assets/img/pdf images.png">
+         </ion-thumbnail>
+         <ion-label class="ion-text-wrap">
+            consectetur adipiscing elit. Duis ut urna neque.
+         </ion-label>
+      </ion-item>
+      <ion-item lines="none" class="download-file">
+         <ion-thumbnail slot="start">
+            <img src="assets/img/pdf images.png">
+         </ion-thumbnail>
+         <ion-label class="ion-text-wrap">
+            consectetur adipiscing elit. Duis ut urna neque.
+         </ion-label>
+      </ion-item>
+      <ion-item lines="none" class="download-file">
+         <ion-thumbnail slot="start">
+            <img src="assets/img/pdf images.png">
+         </ion-thumbnail>
+         <ion-label class="ion-text-wrap">
+            consectetur adipiscing elit. Duis ut urna neque.
+         </ion-label>
+      </ion-item>
+ </ion-list>
+    <!-- section list end Contact -->
   </ion-grid>
 </ion-content>

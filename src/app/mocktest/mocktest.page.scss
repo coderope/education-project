@@ -1,84 +1,44 @@
-ion-toolbar {
-    // height: 60px;
-    --background: transparent;
-    background-color: var(--ion-color-orange);
-    color: var(--ion-color-white);
-    text-transform: uppercase;
-    ion-icon {
-        margin-top: 6px;
-        font-size: 27px;
-    }
+ion-list{
+    ion-item{
+        margin-bottom: 10px;
+        ion-icon {
  
-        // ion-title {
-        //     margin-top: 6px;
-        // }
-  
-}
-
-ion-grid {
-    margin-top: 28px;
-    padding: 0px;
-    
-
-ion-card {
-    width: 100%;
-    margin: 0 auto;
-    border-left: 12px solid #ffc10740;
-    box-shadow: 0px 0px 10px 0px #eee;
-}
-
-ion-segment-button {
-    height: 46px;
-    font-size: 17px;
-}
-ion-icon {
-    float: right;
-    background-color: #ffa5003b;
-    color: var(--ion-color-orange);
-    border-radius: 50%;
-    font-size: 28px;
-    padding: 10px 10px;
-}
-ion-card-content {
-    padding: 20px 11px 20px 11px !important;
-    h1 {
-        font-size: 18px !important;
-        font-weight: bold !important;
-        margin-bottom: 10px !important;
+            background-color: #ffa5003b;
+            color: var(--ion-color-orange);
+            border-radius: 50%;
+            font-size: 28px;
+            padding: 10px 10px;
+        }
+        ion-label{
+            h1 {
+                font-size: 18px !important;
+                font-weight: bold !important;
+                margin-bottom: 10px !important;
+            }
+            p{
+                font-size: 16px;
+                color:var(--ion-color-black);
+                opacity: 0.7;
+            }
+        }
     }
 }
-
-}
-ion-segment-button {
-    height: 46px !important;
-    font-size: 17px !important;
-}
-ion-grid .mock-test-header {
-    // margin-top: -29px;
-    font-size: 26px;
-}
-
-
-
-
 ion-segment {
-    background-color: var(--ion-color-orange);
-   
-    width: 100%;
-    border-radius: 0px;
-    color: var(--ion-color-white);
+    --background: var(--ion-color-orange);
+   border-radius: 0px;
+  
     ion-segment-button{
-        height: 46px !important;
-        font-size: 12px !important;
+        height: 46px;
+        text-transform: capitalize;
         --background: #ff9700;
         --color: #fff;
         --background-checked: #fff;
         --color-checked: #ff9700;
         --border-radius: 5px;
-        --indicator-color: #ff9700;
+        --indicator-hight: 0px;
+        --border-radius: 0px;
+        font-size: 18px;
     }
-    // .segment-button-checked {
-    //     color:var(--ion-color-black) !important;
-    // }
+   
     
 }

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./book-detail.page.scss'],
 })
 export class BookDetailPage implements OnInit {
-
+  segmentModel = "overview";
   constructor() { }
 
   ngOnInit() {

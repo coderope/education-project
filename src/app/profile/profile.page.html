@@ -1,37 +1,17 @@
 <ion-header>
-   <ion-toolbar>
-      <ion-buttons slot="start" (click)="toggleMenu()">
+   <ion-toolbar mode="ios">
+      <ion-buttons slot="start">
          <ion-menu-button></ion-menu-button>
-
       </ion-buttons>
-      <ion-icon name="create-outline" slot="end" [routerLink]="['/edit-profile']" routerLinkActive="router-link-active" ></ion-icon>
+      <ion-title>Profile</ion-title>
+
+      <ion-icon name="create-outline" slot="end" size="large" [routerLink]="['/edit-profile']"></ion-icon>
        
-      <ion-title>PROFILE</ion-title>
+     
    </ion-toolbar>
    </ion-header> 
-   <ion-content  class="ion-no-padding">
-      <!-- <div class="header">
-         <ion-item lines="none">
-            <ion-buttons slot="start">
-               <ion-menu-button></ion-menu-button>
-            </ion-buttons>
-            <ion-label>profile</ion-label>
-            <ion-icon name="create-outline" slot="end" [routerLink]="['/edit-profile']" routerLinkActive="router-link-active" ></ion-icon>
-         </ion-item>
-      </div> -->
+   <ion-content>
       <ion-grid>
-         <!-- <ion-card class="ion-text-center profile-card">
-            <div class="prifile-image">
-               <img src="assets/img/profile.png">
-               <ion-icon name="camera-outline"></ion-icon>
-               <input type="file">
-            </div>
-            <ion-card-header>
-               <ion-card-title class="ion-text-center">Pooja Dixit</ion-card-title>
-               <ion-card-subtitle>STD-12(A)</ion-card-subtitle>
-            </ion-card-header>
-         </ion-card> -->
-        
         <ion-row>
            <ion-col size="12">
             <ion-col size="12" class="ion-text-center profile-details">
@@ -50,7 +30,6 @@
             <ion-col size="6">
            <ion-card class="ion-text-center">
                   <div class="">
-                     <!-- <img src="assets/img/book-question.png"> -->
                      <circle-progress
                      [percent]="85"
                      [radius]="30"
@@ -64,14 +43,12 @@
                   </div>
                   <p>
                      <br><span>Test completed </span><br> 
-                     <!-- <ion-icon name="lock-closed-outline"></ion-icon> -->
                   </p>
                </ion-card>
             </ion-col>
             <ion-col size="6">
            <ion-card class="ion-text-center">
                <div class="">
-                  <!-- <img src="assets/img/book-question.png"> -->
                   <circle-progress
                   [percent]="85"
                   [radius]="30"
@@ -85,7 +62,6 @@
                </div>
                <p>
                   <br><span>Lessons completed </span><br> 
-                  <!-- <ion-icon name="lock-closed-outline"></ion-icon> -->
                </p>
             </ion-card>
          </ion-col>
@@ -110,7 +86,6 @@
                
                   <p>
                      <br><span>Polls answered</span><br> 
-                     <!-- <ion-icon name="lock-closed-outline"></ion-icon> -->
                   </p>
                </ion-card>
             </ion-col>
@@ -134,39 +109,15 @@
                   [animationDuration]="300"
                  
                 ></circle-progress>
-                  <!-- <img src="assets/img/book-icon.png"> -->
                </div>
                <p>
                   <br><span>Questions Attempted</span><br> 
-                  <!-- <ion-icon name="lock-closed-outline"></ion-icon> -->
                </p>
             </ion-card>
          </ion-col>
       
             
          </ion-row>
-         <!-- <ion-card>
-            <ion-list>
-               <ion-item lines="none">
-                  <ion-icon slot="start" name="call"></ion-icon>
-                  <ion-label>+91 99908784767</ion-label>
-               </ion-item>
-               <ion-item lines="none">
-                  <ion-icon slot="start" name="mail"></ion-icon>
-                  <ion-label>pdfj@gmail.com</ion-label>
-               </ion-item>
-            </ion-list>
-            </ion-card>
-            <ion-list>
-            <ion-item class="personal-details" lines="none">
-               <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
-               <ion-label>Personal Details</ion-label>
-            </ion-item>
-            <ion-item  class="personal-details" lines="none">
-               <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
-               <ion-label>Course Details</ion-label>
-            </ion-item>
-            </ion-list> -->
          <ion-row>
             <ion-col size="12" class="header-text">
                <h3>Leaderboard</h3>

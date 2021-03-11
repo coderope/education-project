@@ -63,6 +63,12 @@ ion-header{
       text-transform: capitalize;
       text-align: center;
     }
+    ion-back-button{
+      color:var(--ion-color-white);
+    }
+    ion-menu-button{
+      color:var(--ion-color-white);
+    }
   }
 }
 .slide-thumb-custom span {
