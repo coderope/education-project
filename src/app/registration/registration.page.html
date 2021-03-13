@@ -8,34 +8,51 @@
       </div>
       <h1>Sign-up</h1>
      </div>
-     <form >
+     <form  [formGroup] = "registration_form" (ngSubmit)="doRegister()">
         <ion-row>
            <ion-col size="12">
               <ion-item >
-                 <ion-label position="floating">Name</ion-label>
-                 <ion-input  ></ion-input>
+                 <ion-label position="floating">First Name</ion-label>
+                 <ion-input  formControlName="first_name"></ion-input>
               </ion-item>
+              <p ion-text class="text-1x has-error red"
+              *ngIf="registration_form.get('first_name').touched && registration_form.get('first_name').hasError('required')">
+               First Name is required.
+           </p>
            </ion-col>
            <ion-col size="12">
-              <ion-item >
-                 <ion-label position="floating">Email</ion-label>
-                 <ion-input ></ion-input>
-              </ion-item>
-           </ion-col>
+            <ion-item >
+               <ion-label position="floating">Last Name</ion-label>
+               <ion-input  formControlName="last_name"></ion-input>
+            </ion-item>
+            <p ion-text class="text-1x has-error red"
+            *ngIf="registration_form.get('last_name').touched && registration_form.get('last_name').hasError('required')">
+            Last Name is required.
+         </p>
+         </ion-col>
            <ion-col size="12">
               <ion-item >
-                 <ion-label position="floating">Phone No</ion-label>
-                 <ion-input  ></ion-input>
+                 <ion-label position="floating" >Email</ion-label>
+                 <ion-input formControlName="email"></ion-input>
               </ion-item>
+              <p ion-text class="text-1x has-error red"
+              *ngIf="registration_form.get('email').touched && registration_form.get('email').hasError('required')">
+              Email is required.
+           </p>
            </ion-col>
+           <input type="hidden" formControlName="role">
            <ion-col size="12">
               <ion-item size="12">
-                 <ion-label position="floating">Password</ion-label>
-                 <ion-input ></ion-input>
+                 <ion-label position="floating" >Password</ion-label>
+                 <ion-input formControlName="password"></ion-input>
               </ion-item>
+              <p ion-text class="text-1x has-error red"
+              *ngIf="registration_form.get('password').touched && registration_form.get('password').hasError('required')">
+              Password is required.
+           </p>
            </ion-col>
         </ion-row>
-        <ion-button  expand="block" >Sign Up</ion-button>
+        <ion-button type="submit" expand="block" >Sign Up</ion-button>
      </form>
      <p  class="ion-text-center">Already have account? <ion-text routerLink= "/login">Login</ion-text></p>
   </ion-grid>
