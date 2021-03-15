@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
-
+import {  CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { DashboardPageRoutingModule } from './dashboard-routing.module';
 
 import { DashboardPage } from './dashboard.page';
@@ -15,6 +15,7 @@ import { DashboardPage } from './dashboard.page';
     IonicModule,
     DashboardPageRoutingModule
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   declarations: [DashboardPage]
 })
 export class DashboardPageModule {}

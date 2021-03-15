@@ -49,7 +49,8 @@ const routes: Routes = [
   {
     path: 'book-detail',
     loadChildren: () => import('./book-detail/book-detail.module').then( m => m.BookDetailPageModule)
-  },  {
+  },
+  {
     path: 'reset-password',
     loadChildren: () => import('./reset-password/reset-password.module').then( m => m.ResetPasswordPageModule)
   }

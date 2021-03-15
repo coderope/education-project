@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content  class="ion-no-padding">
+<ion-content class="ion-no-padding">
   <!-- <div class="header">
     <ion-item lines="none">
       <ion-icon name="chevron-back-outline" [routerLink]="['/profile']"></ion-icon>
@@ -15,43 +15,46 @@
         </ion-item>
    
   </div> -->
-<ion-grid class="ion-padding">
- <div class="profile-cover-pic">
-   <div class="cover-pic-image">
-    <img src="assets/img/cover.jpg">
-   </div>
-   
-   
-      <div class="profile-pic" >
-     
-        <ion-img  src="assets/img/profile.png"></ion-img>
+  <ion-grid class="ion-padding">
+    <form [formGroup]="edit_form" (ngSubmit)="updateProfile()">
+      <div class="profile-cover-pic">
+        <div class="cover-pic-image">
+          <img src="assets/img/cover.jpg">
+        </div>
+
+
+        <div class="profile-pic">
+
+          <ion-img src="assets/img/profile.png"></ion-img>
+        </div>
       </div>
-   </div>
-   <ion-list>
-    <ion-item lines="none">
-      <ion-icon name="person"></ion-icon>
-      <ion-input placeholder="User Name"></ion-input>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-icon name="mail"></ion-icon>
-      <ion-input placeholder="Email"></ion-input>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-icon name="lock-closed"></ion-icon>
-      <ion-input placeholder="Password"></ion-input>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-icon name="calendar-number"></ion-icon>
-      <ion-input placeholder="Date of Birth"></ion-input>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-icon name="location"></ion-icon>
-      <ion-input placeholder="Address"></ion-input>
-    </ion-item>
-    
-    <ion-button expand="block">Update</ion-button>
-   </ion-list>
-</ion-grid>
+      <ion-list>
+        <ion-item lines="none">
+          <ion-icon name="person"></ion-icon>
+          <ion-input placeholder="User Name" readOnly formControlName="first_name"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="mail"></ion-icon>
+          <ion-input placeholder="Email" readOnly formControlName="email"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="lock-closed"></ion-icon>
+          <ion-input placeholder="Password" formControlName="password"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="calendar-number"></ion-icon>
+          <ion-input placeholder="Date of Birth" formControlName="birth_date"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="location"></ion-icon>
+          <ion-input placeholder="Address" formControlName="address"></ion-input>
+        </ion-item>
+
+        <ion-button type="submit" expand="block">Update</ion-button>
+      </ion-list>
+    </form>
+  </ion-grid>
+
 </ion-content>
 
 <!-- <ion-header>
@@ -62,4 +65,3 @@
      <ion-title>PROFILE</ion-title>
   </ion-toolbar>
 </ion-header> -->
-

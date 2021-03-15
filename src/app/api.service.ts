@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, of, Subject } from 'rxjs';
-import  {Storage} from '@ionic/storage';
+import { Storage } from '@ionic/storage';
 import {
   AlertController,
   ActionSheetController,
@@ -11,9 +11,6 @@ import {
   MenuController,
   ToastController
 } from "@ionic/angular";
-
-
-
 
 const baseUrl = 'http://education.codrope.com/';
 const apiURL = baseUrl + 'api/users/';
@@ -30,11 +27,11 @@ export class ApiService {
     private http: HttpClient,
     private alertCtrl: AlertController,
     private storage: Storage,
-    ) {
+  ) {
     this.userLoginSubject.subscribe(user => {
       this.user = user;
     })
-}
+  }
   async successToast(msg) {
     const toast = await this.toastCtrl.create({
       message: msg,
@@ -46,7 +43,7 @@ export class ApiService {
     toast.present();
   }
 
- async errorToast(msg) {
+  async errorToast(msg) {
     const toast = await this.toastCtrl.create({
       message: msg,
       color: 'danger',
@@ -64,13 +61,16 @@ export class ApiService {
     await alert.present();
   }
 
- 
+
 
   login(data) {
     return this.http.post(baseUrl + 'api/users/login', data);
   }
   post(url, data) {
     return this.http.post(apiURL + url, data);
+  }
+  get(url,) {
+    return this.http.get(apiURL + url,);
   }
   getUserData(callback) {
     this.storage.get("user").then(callback);

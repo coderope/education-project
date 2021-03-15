@@ -43,8 +43,7 @@ export class ResetPasswordPage implements OnInit {
           }
         },
         err => {
-
-          _self.api.successToast(err['error']['message']);
+           _self.api.successToast(err['error']['message']);
         }
       );
     }

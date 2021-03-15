@@ -8,15 +8,10 @@
          <img src="assets/img/cover.jpg" routerLink="/profile">
          <span>10</span>
       </ion-avatar>
-     
+
    </ion-toolbar>
 </ion-header>
 <ion-content>
-   
-  
-
-
-
 
    <ion-grid class="ion-no-padding">
       <ion-row>
@@ -26,28 +21,32 @@
             </ion-item>
          </ion-col>
          <ion-col size="12">
+
             <div data-slide-custom="slide" class="slide">
+
                <div #sliderDiv class="slide-items">
-                <div class="custom-slider-top">
-                  <div class="live-streaming-img">
-                     <img src="assets/img/cover.jpg">
-                     <div class="about-content">
-                        <h1>
-                           100 UPSC Lebel MCQS on Indian Plolicy for Prelims 2021 (part22)
-                        </h1>
-                        <p>
-                           <ion-icon name="time"></ion-icon>
-                           John
-                        </p>
-                        <ion-button size="small">
-                           <ion-icon name="play"></ion-icon>
-                           Whatch Live
-                        </ion-button>
-                     </div>
+                  <div class="custom-slider-top" *ngFor="let object of liveStreamData ">
+                    
+                        <div class="live-streaming-img"  >
+                           <img [src]="object.thumbnail">
+                           <div class="about-content">
+                              <h1>
+                                 {{object.title}}
+                              </h1>
+                              <p>
+                                 <ion-icon name="time"></ion-icon>
+                                 {{object.description}}
+                              </p>
+                              <ion-button size="small">
+                                 <ion-icon name="play"></ion-icon>
+                                 Whatch Live
+                              </ion-button>
+                           </div>
+                        </div>
+                    
                   </div>
-                  
-                </div>
-                <div class="custom-slider-top">
+
+                  <!-- <div class="custom-slider-top">
                   <div class="live-streaming-img">
                      <img src="assets/img/l-bg.jpg">
                      <div class="about-content">
@@ -84,19 +83,21 @@
                      </div>
                   </div>
                   
-                </div>
+                </div> -->
                </div>
                <nav class="slide-nav">
-                 <div #sliderThumb class="slide-thumb slide-thumb-custom">
-                 </div>
-                 <button #slidePrev class="slide-prev">Prev</button>
-                 <button #slideNext class="slide-next">Next</button>
+                  <div #sliderThumb class="slide-thumb slide-thumb-custom">
+                  </div>
+                  <button #slidePrev class="slide-prev">Prev</button>
+                  <button #slideNext class="slide-next">Next</button>
                </nav>
-             </div>
+
+            </div>
+
          </ion-col>
       </ion-row>
-      
-    
+
+
       <ion-row>
          <ion-col size="12">
             <ion-item lines="none" class="courses-header">
@@ -105,17 +106,17 @@
          </ion-col>
          <ion-col size="12">
             <ion-slides [options]="option" class="slider-courses-app">
-               <ion-slide>
+               <ion-slide *ngFor="let item of courseList">
                   <ion-card class="courses-tab-f">
                      <ion-row class="courses-tab-f-bg-color">
                         <ion-col size="12">
                            <ion-card-header class="ion-text-center ion-no-padding">
-                              <ion-card-title >Exam Master</ion-card-title>
-                              <h2 >
+                              <ion-card-title>Exam Master</ion-card-title>
+                              <h2>
                                  <ion-text color="warning">Hindi</ion-text>
                                  Medium
                               </h2>
-                              <strong >CBSE | UP | BIHAR | ALL STATE BOARD</strong>
+                              <strong>CBSE | UP | BIHAR | ALL STATE BOARD</strong>
                            </ion-card-header>
                            <ion-card-content class="ion-no-padding mt-10">
                               <ion-row class="ion-margin-top">
@@ -141,30 +142,30 @@
                      <ion-row class="details-courses">
                         <ion-col size="12">
                            <h3>
-                              XII political science home Online Tuition
+                              {{item.title}}
                            </h3>
                         </ion-col>
                         <ion-col size="12">
-                           <ion-text>Live Classes, Study Notes, Mock Test, Doubt Classes & Many More</ion-text>
+                           <ion-text>{{item.language}}</ion-text>
                            <ion-button expand="block">Get Subscription</ion-button>
                         </ion-col>
-                        <ion-col size="12" >
+                        <ion-col size="12">
                            <ion-text class="need-help">Need Help? Call Us</ion-text>
                         </ion-col>
                      </ion-row>
                   </ion-card>
                </ion-slide>
-               <ion-slide>
+               <!-- <ion-slide>
                   <ion-card class="courses-tab-f">
                      <ion-row class="courses-tab-f-bg-color sky-blue">
                         <ion-col size="12">
                            <ion-card-header class="ion-text-center ion-no-padding">
-                              <ion-card-title >Exam Master</ion-card-title>
-                              <h2 >
+                              <ion-card-title>Exam Master</ion-card-title>
+                              <h2>
                                  <ion-text color="warning">Hindi</ion-text>
                                  Medium
                               </h2>
-                              <strong >CBSE | UP | BIHAR | ALL STATE BOARD</strong>
+                              <strong>CBSE | UP | BIHAR | ALL STATE BOARD</strong>
                            </ion-card-header>
                            <ion-card-content class="ion-no-padding mt-10">
                               <ion-row class="ion-margin-top">
@@ -197,7 +198,7 @@
                            <ion-text>Live Classes, Study Notes, Mock Test, Doubt Classes & Many More</ion-text>
                            <ion-button expand="block">Get Subscription</ion-button>
                         </ion-col>
-                        <ion-col size="12" >
+                        <ion-col size="12">
                            <ion-text class="need-help">Need Help? Call Us</ion-text>
                         </ion-col>
                      </ion-row>
@@ -208,12 +209,12 @@
                      <ion-row class="courses-tab-f-bg-color orange">
                         <ion-col size="12">
                            <ion-card-header class="ion-text-center ion-no-padding">
-                              <ion-card-title >Exam Master</ion-card-title>
-                              <h2 >
+                              <ion-card-title>Exam Master</ion-card-title>
+                              <h2>
                                  <ion-text color="warning">Hindi</ion-text>
                                  Medium
                               </h2>
-                              <strong >CBSE | UP | BIHAR | ALL STATE BOARD</strong>
+                              <strong>CBSE | UP | BIHAR | ALL STATE BOARD</strong>
                            </ion-card-header>
                            <ion-card-content class="ion-no-padding mt-10">
                               <ion-row class="ion-margin-top">
@@ -246,16 +247,16 @@
                            <ion-text>Live Classes, Study Notes, Mock Test, Doubt Classes & Many More</ion-text>
                            <ion-button expand="block">Get Subscription</ion-button>
                         </ion-col>
-                        <ion-col size="12" >
+                        <ion-col size="12">
                            <ion-text class="need-help">Need Help? Call Us</ion-text>
                         </ion-col>
                      </ion-row>
                   </ion-card>
-               </ion-slide>
+               </ion-slide> -->
             </ion-slides>
          </ion-col>
       </ion-row>
-     
+
       <ion-row>
          <ion-col size="12">
             <ion-item lines="none" class="courses-header">
@@ -265,165 +266,169 @@
          <ion-col size="12">
             <ion-slides>
 
+               <ion-slide *ngFor="let feed of trendingList">
+                  <ion-card>
+                     <ion-row class="action-tending-part orange">
+                        <ion-col size="8" class="ion-text-left">
+                           <h4>
+                              {{feed.title}}
+                           </h4>
+                           <P>CBSE | UP | BIHAR | MP | All State Board</P>
+                        </ion-col>
+                        <ion-col size="4" class="action-tending-part-2">
+                           <ion-icon name="lock-closed-outline"></ion-icon>
+                           <div class="user-1 yellow">
+                              <img src="assets/img/user-img-1.png">
+                           </div>
+                        </ion-col>
+                     </ion-row>
+                     <ion-row>
+                        <ion-col class="ion-text-left ion-padding">
+                           <h3>{{feed.language}} <ion-text class="warning"> </ion-text>
+                           </h3>
+                           <ion-chip color="secondary">
+                              <ion-label>Secondary</ion-label>
+                           </ion-chip>
+                           <ion-chip color="success">
+                              <ion-label>Success</ion-label>
+                           </ion-chip><BR>
+                           <ion-chip color="tertiary">
+                              <ion-icon name="time-outline"></ion-icon>
+                              <ion-label>7 mar 7:30PM <span>Mukesh Sir</span></ion-label>
+
+                           </ion-chip>
+                        </ion-col>
+                     </ion-row>
+
+                  </ion-card>
+               </ion-slide>
+
+               <!-- <ion-slide>
+                  <ion-card>
+                     <ion-row class="action-tending-part purple">
+                        <ion-col size="8" class="ion-text-left">
+                           <h4>
+                              CLASS 12TH PHYSICS
+                           </h4>
+                           <P>CBSE | UP | BIHAR | MP | All State Board</P>
+                        </ion-col>
+                        <ion-col size="4" class="action-tending-part-2">
+                           <ion-icon name="lock-closed-outline"></ion-icon>
+                           <div class="user-1 yellow">
+                              <img src="assets/img/user-img-1.png">
+                           </div>
+                        </ion-col>
+                     </ion-row>
+                     <ion-row>
+                        <ion-col class="ion-text-left ion-padding">
+                           <h3>Class 12 Physics <ion-text class="warning">Hindi Medium </ion-text>
+                           </h3>
+                           <ion-chip color="secondary">
+                              <ion-label>Secondary</ion-label>
+                           </ion-chip>
+                           <ion-chip color="success">
+                              <ion-label>Success</ion-label>
+                           </ion-chip><BR>
+                           <ion-chip color="tertiary">
+                              <ion-icon name="time-outline"></ion-icon>
+                              <ion-label>7 mar 7:30PM <span>Mukesh Sir</span></ion-label>
+
+                           </ion-chip>
+                        </ion-col>
+                     </ion-row>
+
+                  </ion-card>
+               </ion-slide>
+
                <ion-slide>
-                   <ion-card>
-                   <ion-row class="action-tending-part orange">
-                      <ion-col size="8" class="ion-text-left">
-                         <h4>
-                            CLASS 12TH PHYSICS
-                         </h4>
-                         <P>CBSE | UP | BIHAR | MP | All State Board</P>
-                      </ion-col>
-                      <ion-col size="4" class="action-tending-part-2">
-                         <ion-icon name="lock-closed-outline"></ion-icon>
-                         <div class="user-1 yellow">
-                            <img src="assets/img/user-img-1.png">
-                         </div>
-                      </ion-col>
-                   </ion-row>
-                   <ion-row>
-                      <ion-col class="ion-text-left ion-padding">
-                         <h3>Class 12 Physics <ion-text class="warning">Hindi Medium </ion-text></h3>
-                         <ion-chip color="secondary">
-                            <ion-label>Secondary</ion-label>
-                          </ion-chip>
-                          <ion-chip color="success">
-                            <ion-label>Success</ion-label>
-                          </ion-chip><BR>
-                          <ion-chip  color="tertiary">
-                            <ion-icon name="time-outline"></ion-icon>
-                            <ion-label>7 mar 7:30PM <span>Mukesh Sir</span></ion-label>
-                            
-                          </ion-chip>
-                      </ion-col>
-                   </ion-row>
-                      
-                      </ion-card>
-                    </ion-slide>
-        
-                <ion-slide>
-                   <ion-card>
-                      <ion-row class="action-tending-part purple">
-                         <ion-col size="8" class="ion-text-left">
-                            <h4>
-                               CLASS 12TH PHYSICS
-                            </h4>
-                            <P>CBSE | UP | BIHAR | MP | All State Board</P>
-                         </ion-col>
-                         <ion-col size="4" class="action-tending-part-2">
-                            <ion-icon name="lock-closed-outline"></ion-icon>
-                            <div class="user-1 yellow">
-                               <img src="assets/img/user-img-1.png">
-                            </div>
-                         </ion-col>
-                      </ion-row>
-                      <ion-row>
-                         <ion-col class="ion-text-left ion-padding">
-                            <h3>Class 12 Physics <ion-text class="warning">Hindi Medium </ion-text></h3>
-                            <ion-chip color="secondary">
-                               <ion-label>Secondary</ion-label>
-                             </ion-chip>
-                             <ion-chip color="success">
-                               <ion-label>Success</ion-label>
-                             </ion-chip><BR>
-                             <ion-chip  color="tertiary">
-                               <ion-icon name="time-outline"></ion-icon>
-                               <ion-label>7 mar 7:30PM <span>Mukesh Sir</span></ion-label>
-                               
-                             </ion-chip>
-                         </ion-col>
-                      </ion-row>
-                         
-                         </ion-card>
-                 </ion-slide>
-        
-                <ion-slide>
-                   <ion-card>
-                      <ion-row class="action-tending-part green">
-                         <ion-col size="8" class="ion-text-left">
-                            <h4>
-                               CLASS 12TH PHYSICS
-                            </h4>
-                            <P>CBSE | UP | BIHAR | MP | All State Board</P>
-                         </ion-col>
-                         <ion-col size="4" class="action-tending-part-2">
-                            <ion-icon name="lock-closed-outline"></ion-icon>
-                            <div class="user-1 yellow">
-                               <img src="assets/img/user-img-1.png">
-                            </div>
-                         </ion-col>
-                      </ion-row>
-                      <ion-row>
-                         <ion-col class="ion-text-left ion-padding">
-                            <h3>Class 12 Physics <ion-text class="warning">Hindi Medium </ion-text></h3>
-                            <ion-chip color="secondary">
-                               <ion-label>Secondary</ion-label>
-                             </ion-chip>
-                             <ion-chip color="success">
-                               <ion-label>Success</ion-label>
-                             </ion-chip><BR>
-                             <ion-chip  color="tertiary">
-                               <ion-icon name="time-outline"></ion-icon>
-                               <ion-label>7 mar 7:30PM <span>Mukesh Sir</span></ion-label>
-                               
-                             </ion-chip>
-                         </ion-col>
-                      </ion-row>
-                         
-                         </ion-card>
-                    </ion-slide>
-        
-              </ion-slides>
+                  <ion-card>
+                     <ion-row class="action-tending-part green">
+                        <ion-col size="8" class="ion-text-left">
+                           <h4>
+                              CLASS 12TH PHYSICS
+                           </h4>
+                           <P>CBSE | UP | BIHAR | MP | All State Board</P>
+                        </ion-col>
+                        <ion-col size="4" class="action-tending-part-2">
+                           <ion-icon name="lock-closed-outline"></ion-icon>
+                           <div class="user-1 yellow">
+                              <img src="assets/img/user-img-1.png">
+                           </div>
+                        </ion-col>
+                     </ion-row>
+                     <ion-row>
+                        <ion-col class="ion-text-left ion-padding">
+                           <h3>Class 12 Physics <ion-text class="warning">Hindi Medium </ion-text>
+                           </h3>
+                           <ion-chip color="secondary">
+                              <ion-label>Secondary</ion-label>
+                           </ion-chip>
+                           <ion-chip color="success">
+                              <ion-label>Success</ion-label>
+                           </ion-chip><BR>
+                           <ion-chip color="tertiary">
+                              <ion-icon name="time-outline"></ion-icon>
+                              <ion-label>7 mar 7:30PM <span>Mukesh Sir</span></ion-label>
+
+                           </ion-chip>
+                        </ion-col>
+                     </ion-row>
+
+                  </ion-card>
+               </ion-slide> -->
+
+            </ion-slides>
          </ion-col>
       </ion-row>
-     
-     
-    
-    <ion-row>
-      <ion-col size="12">
-         <ion-item lines="none" class="courses-header">
-            <ion-label> Live Classes. </ion-label>
-         </ion-item>
-      </ion-col>
-      <ion-col size="12">
-         <ion-slides>
 
-            <ion-slide>
-               <ion-card class="action-on-live-Classes bg-clor-tag-f">
-                  <div class="live-bg">
-                     <ion-button class="btn_live" size="small">Live</ion-button>
-                     <img src="assets/img/user-img-4.png" />
-                  </div>
-                 
-                  <ion-card-header>
-                     <h3>Class 12 Physics <ion-text class="warning">Hindi Medium </ion-text></h3>
-                     <p>
-                        <ion-chip color="secondary">
-                           <ion-label>Secondary</ion-label>
-                         </ion-chip>
-                         <ion-chip color="success">
-                           <ion-label>Success</ion-label>
-                         </ion-chip>
-                     </p>
-                    <p>
-                     <ion-chip  color="tertiary">
-                        <ion-icon name="time-outline"></ion-icon>
-                        <ion-label>7 mar 7:30PM <span>Mukesh Sir</span></ion-label>
-                      </ion-chip>
-                    </p>
-                      
-                  </ion-card-header>
-                 
-                </ion-card>
-              
-                 </ion-slide>
-     
-     
-           </ion-slides>
-      </ion-col>
-   </ion-row>
-  
-  
+
+
+      <ion-row>
+         <ion-col size="12">
+            <ion-item lines="none" class="courses-header">
+               <ion-label> Live Classes. </ion-label>
+            </ion-item>
+         </ion-col>
+         <ion-col size="12">
+            <ion-slides>
+
+               <ion-slide *ngFor="let item of dashboardData.liveStream">
+                  <ion-card class="action-on-live-Classes bg-clor-tag-f">
+                     <div class="live-bg">
+                        <ion-button class="btn_live" size="small">{{item.title}}</ion-button>
+                        <img [src]="item.thumbnail" />
+                     </div>
+
+                     <ion-card-header>
+                        <h3>{{item.description}} <ion-text class="warning">Hindi Medium </ion-text>
+                        </h3>
+                        <p>
+                           <ion-chip color="secondary">
+                              <ion-label>Secondary</ion-label>
+                           </ion-chip>
+                           <ion-chip color="success">
+                              <ion-label>Success</ion-label>
+                           </ion-chip>
+                        </p>
+                        <p>
+                           <ion-chip color="tertiary">
+                              <ion-icon name="time-outline"></ion-icon>
+                              <ion-label>7 mar 7:30PM <span>Mukesh Sir</span></ion-label>
+                           </ion-chip>
+                        </p>
+
+                     </ion-card-header>
+
+                  </ion-card>
+
+               </ion-slide>
+
+
+            </ion-slides>
+         </ion-col>
+      </ion-row>
+
+
 
       <ion-row>
          <ion-col size="12">
@@ -433,7 +438,33 @@
          </ion-col>
          <ion-col size="12">
             <ion-slides [options]="mocktest">
-               <ion-slide>
+               <ion-slide *ngFor="let mock of dashboardData.mockTest">
+                  <ion-card class="mock-test-list">
+                     <ion-card-header class="ion-text-left">
+                        <ion-button size="small" color="secondary">Join Now</ion-button>
+                        <ion-card-title>{{mock.title}}</ion-card-title>
+                        <ion-card-subtitle> {{mock.date |date:'mediumDate'}} | {{mock.date |date:'shortTime'}}
+                        </ion-card-subtitle>
+                     </ion-card-header>
+                     <ion-card-content>
+                        <ion-row>
+                           <ion-col size="4">
+                              <h1>{{mock.questions}}</h1>
+                              <label>questions</label>
+                           </ion-col>
+                           <ion-col size="4">
+                              <h1>{{mock.duration}}</h1>
+                              <label>Max Marks </label>
+                           </ion-col>
+                           <ion-col size="4">
+                              <h1>37</h1>
+                              <label>Minutes</label>
+                           </ion-col>
+                        </ion-row>
+                     </ion-card-content>
+                  </ion-card>
+               </ion-slide>
+               <!-- <ion-slide>
                   <ion-card class="mock-test-list">
                      <ion-card-header class="ion-text-left">
                         <ion-button size="small" color="secondary">Join Now</ion-button>
@@ -457,36 +488,11 @@
                         </ion-row>
                      </ion-card-content>
                   </ion-card>
-               </ion-slide>
-               <ion-slide>
-                  <ion-card class="mock-test-list">
-                     <ion-card-header class="ion-text-left">
-                        <ion-button size="small" color="secondary">Join Now</ion-button>
-                        <ion-card-title>Mock test</ion-card-title>
-                        <ion-card-subtitle> 20 jun | 8:10 Pm</ion-card-subtitle>
-                     </ion-card-header>
-                     <ion-card-content>
-                        <ion-row>
-                           <ion-col size="4">
-                              <h1>234</h1>
-                              <label>questions</label>
-                           </ion-col>
-                           <ion-col size="4">
-                              <h1>53</h1>
-                              <label>Max Marks </label>
-                           </ion-col>
-                           <ion-col size="4">
-                              <h1>37</h1>
-                              <label>Minutes</label>
-                           </ion-col>
-                        </ion-row>
-                     </ion-card-content>
-                  </ion-card>
-               </ion-slide>
+               </ion-slide> -->
             </ion-slides>
          </ion-col>
       </ion-row>
-     
+
       <ion-row>
          <ion-col size="12">
             <ion-item lines="none" class="courses-header">
@@ -495,22 +501,22 @@
          </ion-col>
          <ion-col size="12">
             <ion-slides>
-               <ion-slide>
+               <ion-slide *ngFor="let book of dashboardData.recent_book">
                   <ion-card class="book-section">
                      <ion-row>
                         <ion-col size="4">
                            <div class="book-image">
-                         
-                                 <img src="assets/img/book.jpg">
-                             
-                             
+
+                              <img [src]="book.image">
+
+
                            </div>
                         </ion-col>
                         <ion-col size="8">
-                           <h3 class="ion-text-wrap"> NCERT Books for Class 12-English Medium </h3>
+                           <h3 class="ion-text-wrap"> {{book.description}} </h3>
                            <ion-label class="ion-text-wrap">
                               <ion-chip color="secondary">
-                                 <ion-label>Class 10</ion-label>
+                                 <ion-label>{{book.title}}</ion-label>
                               </ion-chip>
                               <ion-chip color="success">
                                  <ion-label>Other</ion-label>
@@ -522,9 +528,11 @@
                                  <ion-chip outline color="light">
                                     <ion-avatar>
                                        <img src="assets/img/pdf images.png" />
+                                       <!-- <a href="/files/sdsdfasd89asd8f.pdf" download="newname.pdf">
+                                       </a> -->
                                     </ion-avatar>
                                     <ion-label>
-                                       <ion-text>10 PDF</ion-text>
+                                       <ion-text>{{book.title}}</ion-text>
                                     </ion-label>
                                  </ion-chip>
                                  <ion-chip outline color="light">
@@ -539,7 +547,7 @@
                      </ion-row>
                   </ion-card>
                </ion-slide>
-               <ion-slide>
+               <!-- <ion-slide>
                   <ion-card class="book-section">
                      <ion-row>
                         <ion-col size="4">
@@ -579,11 +587,11 @@
                         </ion-col>
                      </ion-row>
                   </ion-card>
-               </ion-slide>
+               </ion-slide> -->
             </ion-slides>
          </ion-col>
       </ion-row>
-     
-     
+
+
    </ion-grid>
 </ion-content>

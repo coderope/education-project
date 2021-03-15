@@ -3,7 +3,7 @@
       <ion-buttons slot="start">
          <ion-back-button text="" defaultHref="/"></ion-back-button>
       </ion-buttons>
-     <ion-title>courses</ion-title>
+      <ion-title>courses</ion-title>
    </ion-toolbar>
 </ion-header>
 <ion-content>
@@ -42,15 +42,16 @@
          </ion-list> -->
       <ion-row>
          <ion-col size="12">
-            <ion-card class="orange">
+            <ion-card class="sky-blue" *ngFor="let feed of allCourseList">
                <ion-row>
                   <ion-col size="12">
                      <ion-card-header class="ion-text-center ion-no-padding">
-                        <ion-card-title>Exam Master</ion-card-title>
+                        <ion-card-title>{{feed.title}}</ion-card-title>
                         <h2>
-                           <ion-text color="warning">Hindi</ion-text>
-                           Medium
+                           <ion-text color="warning">{{feed.language}}</ion-text>
+                           
                         </h2>
+                        <p>{{feed.description}}</p>
                         <strong>CBSE | UP | BIHAR | ALL STATE BOARD</strong>
                      </ion-card-header>
                      <ion-card-content class="ion-no-padding mt-10">
@@ -75,7 +76,7 @@
                   </ion-col>
                </ion-row>
             </ion-card>
-            <ion-card class="sky-blue">
+            <!-- <ion-card class="sky-blue">
                <ion-row>
                   <ion-col size="12">
                      <ion-card-header class="ion-text-center ion-no-padding">
@@ -173,9 +174,12 @@
                      </ion-card-content>
                   </ion-col>
                </ion-row>
-            </ion-card>
+            </ion-card> -->
 
          </ion-col>
       </ion-row>
    </ion-grid>
+   <ion-infinite-scroll (ionInfinite)="loadMore($event)" >
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more wanted list..."></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 </ion-content>
